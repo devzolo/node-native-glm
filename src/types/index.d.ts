@@ -1,4 +1,4 @@
-declare module 'native-glm' {
+declare module '@devzolo/node-native-glm' {
     export namespace glm {
         class vec2 {
             x: number;
@@ -10,10 +10,10 @@ declare module 'native-glm' {
 
             sub(vec: vec2): vec2;
             sub(num: number): vec2;
-            
+
             mul(vec: vec2): vec2;
             mul(num: number): vec2;
-                        
+
             div(vec: vec2): vec2;
             div(num: number): vec2;
 
@@ -31,10 +31,10 @@ declare module 'native-glm' {
 
             sub(vec: vec3): vec3;
             sub(num: number): vec3;
-            
+
             mul(vec: vec3): vec3;
             mul(num: number): vec3;
-                        
+
             div(vec: vec3): vec3;
             div(num: number): vec3;
 
@@ -43,7 +43,7 @@ declare module 'native-glm' {
 
         class mat4 {
             getAsFloat32Array(): any;
-                        
+
             mul(vec: vec3): mat4;
             mul(num: number): mat4;
         }
@@ -62,4 +62,3 @@ declare module 'native-glm' {
     }
     export default glm;
 }
-  
