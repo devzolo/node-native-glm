@@ -1,0 +1,53 @@
+{
+  "name": "@devzolo/node-native-glm",
+  "version": "1.0.0",
+  "main": "dist",
+  "author": "Raphael-ZoLo <zolotorevsky@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/devzolo/node-native-glm",
+  "publishConfig": {
+    "@devzolo:registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "binary": {
+    "module_name": "native-glm.node",
+    "module_path": "./bin/{platform}/{arch}/",
+    "host": "https://github.com",
+    "remote_path": "/devzolo/node-native-glm/releases/download/main",
+    "package_name": "devzolo-node-native-glm-1.0.0.tgz"
+  },
+  "scripts": {
+    "install_old": "node-pre-gyp install --fallback-to-build",
+    "prebuild": "rimraf ./dist",
+    "sources": "deps-source",
+    "build": "node-pre-gyp install --build-from-source",
+    "postbuild": "tsc",
+    "dist": "tsc",
+    "package": "tsc&&node-pre-gyp install --build-from-source&&jest&&./node_modules/.bin/node-pre-gyp build package",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "node-addon-api": "^4.2.0",
+    "@mapbox/node-pre-gyp": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.7",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "tar": "^6.1.11",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
