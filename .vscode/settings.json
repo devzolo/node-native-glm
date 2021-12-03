@@ -1,6 +1,13 @@
 {
     "files.associations": {
         "system_error": "c",
-        "xlocale": "c"
+        "xlocale": "c",
+        "chrono": "cpp",
+        "functional": "cpp",
+        "optional": "cpp",
+        "type_traits": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xtr1common": "cpp"
     }
 }

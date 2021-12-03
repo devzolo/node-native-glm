@@ -21,6 +21,8 @@
         'src/vec2.cc',
         'src/vec3.hh',
         'src/vec3.cc',
+        'src/vec4.hh',
+        'src/vec4.cc',
         'src/mat4.hh',
         'src/mat4.cc'
       ],
@@ -38,27 +40,27 @@
       "dependencies" : [ "native-glm" ],
       "copies":[
         {
-          'destination': '<(module_root_dir)\\bin\\<(platform)\\<(target_arch)',
+          'destination': '<(module_root_dir)/bin/<(platform)/<(target_arch)',
           'files': [
-            '<(module_root_dir)\\build\\Release\\native-glm.node',
+            '<(module_root_dir)/build/Release/native-glm.node',
           ]
         },
         {
-          'destination': '<(module_root_dir)\\dist',
+          'destination': '<(module_root_dir)/dist',
           'files': [
-            '<(module_root_dir)\\src\\types\\index.d.ts',
+            '<(module_root_dir)/src/types/index.d.ts',
           ]
         },
         {
-          'destination': '<(module_root_dir)\\..\\minejs\\node_modules\\native-glm\\bin\\<(platform)\\<(target_arch)',
+          'destination': '<(module_root_dir)/../node-native-engine/node_modules/@devzolo/node-native-glm/bin/<(platform)/<(target_arch)',
           'files': [
-            '<(module_root_dir)\\build\\Release\\native-glm.node',
+            '<(module_root_dir)/build/Release/native-glm.node',
           ]
         },
         {
-          'destination': '<(module_root_dir)\\..\\minejs\\node_modules\\native-glm\\dist',
+          'destination': '<(module_root_dir)/../node-native-engine/node_modules/@devzolo/node-native-glm/dist',
           'files': [
-            '<(module_root_dir)\\src\\types\\index.d.ts',
+            '<(module_root_dir)/src/types/index.d.ts',
           ]
         },
       ]

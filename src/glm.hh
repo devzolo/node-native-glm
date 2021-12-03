@@ -6,6 +6,7 @@
 
 #include "vec2.hh";
 #include "vec3.hh";
+#include "vec4.hh";
 #include "mat4.hh";
 
 #define JS_GLM___________________________TODO(name) puts("TODO: GLM."#name)
@@ -26,6 +27,7 @@ if (info.Length() < argc) { \
 #define JS_PVOID_ARG(pos, name) void* name = (void*)info[pos].As<Napi::Number>().Int64Value();
 #define JS_VEC2_ARG(pos, name) Vec2* name = Vec2::Unwrap(info[pos].As<Napi::Object>());
 #define JS_VEC3_ARG(pos, name) Vec3* name = Vec3::Unwrap(info[pos].As<Napi::Object>());
+#define JS_VEC4_ARG(pos, name) Vec4* name = Vec4::Unwrap(info[pos].As<Napi::Object>());
 #define JS_MAT4_ARG(pos, name) Mat4* name = Mat4::Unwrap(info[pos].As<Napi::Object>());
 
 #define JS_ARG_TYPE(pos, type)  if (!info[pos].Is##type()) { \

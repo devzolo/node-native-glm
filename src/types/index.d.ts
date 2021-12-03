@@ -25,7 +25,10 @@ declare module '@devzolo/node-native-glm' {
       public y: number;
       public z: number;
 
+      constructor();
+      constructor(ref: vec3);
       constructor(x: number, y: number, z: number);
+
       public add(vec: vec3): vec3;
       public add(num: number): vec3;
 
@@ -40,6 +43,32 @@ declare module '@devzolo/node-native-glm' {
 
       public copy(): vec3;
     }
+
+    class vec4 {
+      public x: number;
+      public y: number;
+      public z: number;
+      public w: number;
+
+      constructor();
+      constructor(ref: vec4);
+      constructor(x: number, y: number, z: number, w: number);
+
+      public add(vec: vec4): vec4;
+      public add(num: number): vec4;
+
+      public sub(vec: vec4): vec4;
+      public sub(num: number): vec4;
+
+      public mul(vec: vec4): vec4;
+      public mul(num: number): vec4;
+
+      public div(vec: vec4): vec4;
+      public div(num: number): vec4;
+
+      public copy(): vec4;
+    }
+
 
     class mat4 {
       public getAsFloat32Array(): any;
