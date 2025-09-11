@@ -6,7 +6,7 @@ class Vec3 : public Napi::ObjectWrap<Vec3> {
   public:
     static Napi::Object Init(Napi::Env env, Napi::Object exports);
     Vec3(const Napi::CallbackInfo &info);
-    glm::vec3 GetValue() { return this->value; };
+    glm::vec3 GetValue() { return this->value; }
 
     static Napi::Value Create(const Napi::CallbackInfo &info, glm::vec3* vec) {
         Napi::External<glm::vec3> external = Napi::External<glm::vec3>::New(info.Env(), vec);

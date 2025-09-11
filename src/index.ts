@@ -1,2 +1,17 @@
-const addon = require(`../bin/${process.platform}/${process.arch}/native-glm`); //require('bindings')('example');
+import { createRequire } from "node:module";
+import path from "node:path";
+
+const require = createRequire(import.meta.dirname);
+
+const addon = require(
+	path.join(
+		import.meta.dirname,
+		"..",
+		"bin",
+		process.platform,
+		process.arch,
+		"native-glm.node",
+	),
+);
+
 export default addon;

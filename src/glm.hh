@@ -4,10 +4,10 @@
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
 
-#include "vec2.hh";
-#include "vec3.hh";
-#include "vec4.hh";
-#include "mat4.hh";
+#include "vec2.hh"
+#include "vec3.hh"
+#include "vec4.hh"
+#include "mat4.hh"
 
 #define JS_GLM___________________________TODO(name) puts("TODO: GLM."#name)
 #define JS_GLM_CONSTANT(name) exports.Set(Napi::String::New(env, #name), Napi::Number::New(env, GLUT_##name))

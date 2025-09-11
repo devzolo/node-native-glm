@@ -1,7 +1,10 @@
-import exemple from "..";
+import assert from "node:assert";
+import { describe, it } from "node:test";
 
-describe('Example Test', () => {
-  it ('exemple.hello() == "world"', () => {
-    expect(exemple.hello()).toEqual('world')
-  })
+import exemple from "../index.ts";
+
+describe("Example Test", () => {
+	it('exemple.helloMethod() == "world"', () => {
+		assert.strictEqual(exemple.helloMethod(), "world");
+	});
 });

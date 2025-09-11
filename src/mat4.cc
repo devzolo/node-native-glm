@@ -1,4 +1,4 @@
-#include "mat4.hh";
+#include "mat4.hh"
 Napi::FunctionReference Mat4::constructor;
 
 Napi::Object Mat4::Init(Napi::Env env, Napi::Object exports) {

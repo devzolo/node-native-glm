@@ -1,4 +1,4 @@
-#include "vec3.hh";
+#include "vec3.hh"
 
 Napi::FunctionReference Vec3::constructor;
 Napi::Object Vec3::Init(Napi::Env env, Napi::Object exports) {

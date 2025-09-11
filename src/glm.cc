@@ -98,7 +98,8 @@ Napi::Value perspective(const Napi::CallbackInfo& info) {
   JS_FLOAT_ARG(2, near);
   JS_FLOAT_ARG(3, far);
 
-  return Mat4::Create(info, &glm::perspective(fov, aspect, near, far));
+  glm::mat4 perspectiveMatrix = glm::perspective(fov, aspect, near, far);
+  return Mat4::Create(info, &perspectiveMatrix);
 }
 
 Napi::Value translate(const Napi::CallbackInfo& info) {
@@ -108,7 +109,8 @@ Napi::Value translate(const Napi::CallbackInfo& info) {
   JS_MAT4_ARG(0, mat);
   JS_VEC3_ARG(1, vec);
 
-  return Mat4::Create(info, &glm::translate(mat->GetValue(), vec->GetValue()));
+  glm::mat4 translateMatrix = glm::translate(mat->GetValue(), vec->GetValue());
+  return Mat4::Create(info, &translateMatrix);
 }
 
 Napi::Object Init(Napi::Env env, Napi::Object exports) {

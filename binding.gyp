@@ -14,6 +14,12 @@
       'target_name': 'native-glm',
       "cflags!": [ "-fno-exceptions" ],
       "cflags_cc!": [ "-fno-exceptions" ],
+      "msvs_settings": {
+        "VCCLCompilerTool": {
+          "AdditionalOptions": ["/utf-8"]
+        }
+      },
+      "msvs_disabled_warnings": [4996],
       'sources': [
         'src/glm.hh',
         'src/glm.cc',
@@ -26,7 +32,7 @@
         'src/mat4.hh',
         'src/mat4.cc'
       ],
-      'defines' : ['NAPI_DISABLE_CPP_EXCEPTIONS','UNICODE'],
+      'defines' : ['NAPI_DISABLE_CPP_EXCEPTIONS','_UNICODE','WIN32_LEAN_AND_MEAN'],
       'libraries': [],
       "include_dirs": [
         "./deps/glm-0.9.9.8/glm",

@@ -1,4 +1,4 @@
-#include "vec2.hh";
+#include "vec2.hh"
 
 Napi::Object Vec2::Init(Napi::Env env, Napi::Object exports) {
     Napi::Function func = DefineClass(env, "vec2", {
