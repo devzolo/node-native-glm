@@ -16,7 +16,7 @@ Napi::Object Mat4::Init(Napi::Env env, Napi::Object exports) {
 }
 
 Mat4::Mat4(const Napi::CallbackInfo &info) : Napi::ObjectWrap<Mat4>(info) {
-    Napi::Env env = info.Env();
+    // Napi::Env env = info.Env();
     if (info.Length() < 1) {
         this->value = glm::mat4(1.0f);
 

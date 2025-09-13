@@ -15,7 +15,7 @@ Napi::Object Vec2::Init(Napi::Env env, Napi::Object exports) {
 }
 
 Vec2::Vec2(const Napi::CallbackInfo &info) : Napi::ObjectWrap<Vec2>(info) {
-    Napi::Env env = info.Env();
+    // Napi::Env env = info.Env();
 
     Napi::Number x = info[0].As<Napi::Number>();
     Napi::Number y = info[1].As<Napi::Number>();
@@ -30,7 +30,7 @@ Napi::Value Vec2::GetX(const Napi::CallbackInfo &info) {
 }
 
 void Vec2::SetX(const Napi::CallbackInfo &info, const Napi::Value &value) {
-    Napi::Env env = info.Env();
+    // Napi::Env env = info.Env();
     Napi::Number arg = value.As<Napi::Number>();
     this->value.x = arg.FloatValue();
 }
@@ -41,7 +41,7 @@ Napi::Value Vec2::GetY(const Napi::CallbackInfo &info) {
 }
 
 void Vec2::SetY(const Napi::CallbackInfo &info, const Napi::Value &value) {
-    Napi::Env env = info.Env();
+    // Napi::Env env = info.Env();
     Napi::Number arg = value.As<Napi::Number>();
     this->value.y = arg.FloatValue();
 }

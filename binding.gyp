@@ -56,19 +56,7 @@
           'files': [
             '<(module_root_dir)/src/types/index.d.ts',
           ]
-        },
-        {
-          'destination': '<(module_root_dir)/../node-native-engine/node_modules/@devzolo/node-native-glm/bin/<(platform)/<(target_arch)',
-          'files': [
-            '<(module_root_dir)/build/Release/native-glm.node',
-          ]
-        },
-        {
-          'destination': '<(module_root_dir)/../node-native-engine/node_modules/@devzolo/node-native-glm/dist',
-          'files': [
-            '<(module_root_dir)/src/types/index.d.ts',
-          ]
-        },
+        }
       ]
     }
   ]

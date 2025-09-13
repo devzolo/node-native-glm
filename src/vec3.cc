@@ -86,12 +86,12 @@ Napi::Value Vec3::Div(const Napi::CallbackInfo& info) {
 }
 
 Napi::Value Vec3::Copy(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
+    // Napi::Env env = info.Env();
 
     return Vec3::Create(info, &this->value);
 }
 Vec3::Vec3(const Napi::CallbackInfo &info) : Napi::ObjectWrap<Vec3>(info) {
-    Napi::Env env = info.Env();
+    // Napi::Env env = info.Env();
 
     if(info.Length() < 1) {
         this->value = glm::vec3(0,0,0);
@@ -112,7 +112,7 @@ Napi::Value Vec3::GetX(const Napi::CallbackInfo &info) {
 }
 
 void Vec3::SetX(const Napi::CallbackInfo &info, const Napi::Value &value) {
-    Napi::Env env = info.Env();
+    // Napi::Env env = info.Env();
     Napi::Number arg = value.As<Napi::Number>();
     this->value.x = arg.FloatValue();
 }
@@ -123,7 +123,7 @@ Napi::Value Vec3::GetY(const Napi::CallbackInfo &info) {
 }
 
 void Vec3::SetY(const Napi::CallbackInfo &info, const Napi::Value &value) {
-    Napi::Env env = info.Env();
+    // Napi::Env env = info.Env();
     Napi::Number arg = value.As<Napi::Number>();
     this->value.y = arg.FloatValue();
 }
@@ -134,7 +134,7 @@ Napi::Value Vec3::GetZ(const Napi::CallbackInfo &info) {
 }
 
 void Vec3::SetZ(const Napi::CallbackInfo &info, const Napi::Value &value) {
-    Napi::Env env = info.Env();
+    // Napi::Env env = info.Env();
     Napi::Number arg = value.As<Napi::Number>();
     this->value.z = arg.FloatValue();
 }
